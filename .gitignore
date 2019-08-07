@@ -1,0 +1,8 @@
+node_modules/
+output/
+*.swp
+npm-debug.log
+.idea/
+ui/screenshots/diff
+.DS_Store
+apis/coverage/

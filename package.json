@@ -1,0 +1,37 @@
+{
+  "name": "codeceptjs-jest-supertest-nock-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "jest": "jest --config apis/jest.config.js",
+    "test-ci": "xvfb-run codeceptjs run --steps --plugins retryFailedStep",
+    "test-ci-node1": "xvfb-run codeceptjs run --steps  --grep @node1 --plugins retryFailedStep",
+    "test-ci-node2": "xvfb-run codeceptjs run --steps  --grep @node2 --plugins retryFailedStep",
+    "test-ci-node3": "xvfb-run codeceptjs run --steps --grep @node3 --plugins retryFailedStep",
+    "test-ci-node4": "xvfb-run codeceptjs run --steps --grep @node4 --plugins retryFailedStep",
+    "test": "codeceptjs run --steps --plugins retryFailedStep",
+    "tests-with": "codeceptjs run --steps --plugins retryFailedStep --verbose --grep",
+    "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.json --steps --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:susiecao0416/codeceptjs-jest-supertest-nock-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.3.1",
+    "codeceptjs": "^1.4.6",
+    "codeceptjs-resemblehelper": "^1.5.0",
+    "jest": "^24.5.0",
+    "nightmare": "^2.7.0",
+    "nightmare-upload": "^0.1.1",
+    "nock": "^10.0.6",
+    "regenerator-runtime": "^0.13.2",
+    "supertest": "^4.0.0"
+  }
+}

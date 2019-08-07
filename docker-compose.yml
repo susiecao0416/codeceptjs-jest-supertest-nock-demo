@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+  acceptance-tests:
+    image: test-app:acceptance
+    environment:
+      NODE:
+    build: .
+    links:
+      - postgres:database
+      - web-ci:apphost
+    volumes:
+      - ./ui/output/:/tests/ui/output
+      - ./ui/screenshots/diff:/tests/ui/screenshots/diff
+
+  postgres:
+    image: test-app:postgres${IMAGE_FOR}
+    ports:
+      - 5432
+
+  web-ci:
+    image: test-app:web${IMAGE_FOR}
+    environment:
+      JIG_AWS_ENABLED: 'true'
+      JRUBY_OPTS: '--1.9 -J-Xms256m -J-Xmx2048m -J-XX:+CMSClassUnloadingEnabled -J-XX:+TieredCompilation -J-XX:ReservedCodeCacheSize=128m'
+      RAILS_ENV: automation
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_DEFAULT_REGION: 'us-east-1'
+      AWS_REGION: 'us-east-1'
+      ELASTICSEARCH_HOST: 'https://search-test-app-es-dev-pxvdfqlycu7bajz5xmqwmearv4.us-east-1.es.amazonaws.com'
+      USE_TIMECOP: 'true'
+    ports:
+      - 3000
+    links:
+      - postgres:database
+    volumes:
+      - ./ui/tests:/ui/tests
