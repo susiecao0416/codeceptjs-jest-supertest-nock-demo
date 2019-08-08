@@ -61,3 +61,8 @@ $ npm run test
 [!] Our tests are split in nodes to allows paralelize the execution. If you want to run only one node, use
 ``docker-compose run -e NODE=1 acceptance-tests``
 where "1" can be replaced by the node number you want to execute.
+
+## Mobile Testing
+
+### Reference
+https://www.npmjs.com/package/appium-doctor

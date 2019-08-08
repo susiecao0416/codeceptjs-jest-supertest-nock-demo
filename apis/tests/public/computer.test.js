@@ -9,10 +9,10 @@ describe('Get all computers', () => {
 				// .set('Authorization', configurations.appConfig.allAccessToken)
 				.set('Accept', 'text/html')
 				.set('Content-Type', 'application/x-www-form-urlencoded')
-				.send('name=testNowtestNow5')
-				// .expect([200,303])
+				.send('name=testNowtestNow7')
+				.expect(303)
 				.expect(function (response) {
-					expect(response.body).to.contain('testNowtestNow5');
+					expect(response.body).toContain('testNowtestNow7');
 				})
 				.end(done);
 		})

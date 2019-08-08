@@ -1,8 +1,10 @@
 node_modules/
-output/
+ui/output/
+ui-mobile/output/
 *.swp
 npm-debug.log
 .idea/
+ui-mobile/screenshots/diff
 ui/screenshots/diff
 .DS_Store
 apis/coverage/

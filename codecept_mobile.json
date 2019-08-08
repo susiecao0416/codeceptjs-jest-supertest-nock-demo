@@ -1,0 +1,38 @@
+{
+  "output": "./ui-mobile/output",
+  "helpers": {
+    "Appium": {
+      "app": "",
+      "platform": "",
+      "desiredCapabilities": {}
+    },
+    "ResembleHelper": {
+      "require": "codeceptjs-resemblehelper",
+      "screenshotFolder": "./ui-mobile/output/",
+      "baseFolder": "./ui-mobile/screenshots/base/",
+      "diffFolder": "./ui-mobile/screenshots/diff/"
+    }
+  },
+  "include": {
+    "I": "./ui-mobile/helpers/steps_file.js",
+    "homePage": "./ui-mobile/pages/home.js"
+  },
+  "mocha": {},
+  "bootstrap": false,
+  "teardown": null,
+  "hooks": [],
+  "gherkin": {},
+  "plugins": {
+    "screenshotOnFail": {
+      "enabled": true
+    },
+    "retryFailedStep": {
+      "enabled": true,
+      "retries": 10
+    }
+  },
+  "tests": "./ui-mobile/tests/*_test.js",
+  "waitForTimeout": 20000,
+  "waitForAction": 2000,
+  "name": "codeceptjs-jest-supertest-nock-demo"
+}
