@@ -69,13 +69,24 @@ Please refer to https://codecept.io/advanced
 ### 4.4.1 Run API Tests
 ### 4.4.2 Run Contract Tests
 
-# 5 UI Tests Design
+# 5 UI Tests Framework Design
 ## 5.1 Web Tests
+### 5.1.0 Demo
+Please refer to "ui/tests/computer_test.js"
 
-## 5.2 Mobile Tests
+### 5.1.1 Page Object
+https://codecept.io/pageobjects
 
-## 5.3 Visual Testing
-### 5.3.1 Save screenshot
+### 5.1.2 Data Driven
+https://codecept.io/data
+
+### 5.1.3 BDD
+https://codecept.io/bdd
+
+### 5.1.4 Reporting
+
+## 5.2 Visual Testing
+### 5.2.1 Save screenshot
 1 Please change "false" to "true" when you save screenshot as base images
 ``
 I.saveScreenshot("xxxx.png", false);
@@ -87,7 +98,7 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 
 3 MUST save screenshot in local docker cause the picture resolution taken in docker is smaller than local machine without docker
 
-## Mobile Testing
+## 5.3 Mobile Testing
 ### Reference
 https://www.npmjs.com/package/appium-doctor
 
