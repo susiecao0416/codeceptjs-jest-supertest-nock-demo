@@ -1,7 +1,81 @@
-# testApp Acceptance Tests
+# 1 Goal
+The guide is used to setup the automation framework for UI tests and integration tests.
 
-# How to design acceptance tests
-## Save screenshot
+# 2 Tech/Code Introduction
+## 2.1 Tech Introduction
+- All testing framwork is based on NodeJS
+- UI
+    CodeceptJS: https://codecept.io/basics
+    Nighmare: https://github.com/segmentio/nightmare
+              https://codecept.io/nightmare
+    Appium: http://appium.io/docs/en/about-appium/getting-started/?lang=en
+    
+- Integration
+Jest: https://jestjs.io/docs/en/getting-started
+SuperTest: https://github.com/visionmedia/supertest
+Mountebank: http://www.mbtest.org/docs/gettingStarted
+PACT: https://docs.pact.io/5-minute-getting-started-guide   
+
+- All the demo is based on below testing app provided by Gatling framework
+http://computer-database.gatling.io
+
+
+# 3 NodeJS Installation and Setup
+## 3.1 Install NVM 0.35.1
+https://github.com/nvm-sh/nvm
+
+## 3.2 Install NodeJS 12.12
+```
+nvm install V12.12
+```
+Then use below command to check if the installation is successful
+```
+node -v
+npm -v
+```
+
+## 3.4 Install Java8 and configure Java env when you install appium to run mobile tests
+http://appium.io/docs/en/about-appium/getting-started/?lang=en#getting-started
+
+If you do not want to run mobile, you can remove below 4 packages in package.json:
+    "appium": "^1.14.1",
+    "appium-doctor": "^1.11.1",
+     "wd": "^1.11.3",
+     "webdriverio": "^5.11.14"
+
+
+## 3.5 Run below command in current directory to install all needed framworks configured in "package.json"
+```
+npm install
+```
+After this step, all installation is completed, then you can run below tests.
+
+
+# 4 Run Tests locally
+## 4.1 Run all UI tests locally
+```    
+npm run test
+```
+
+# 4.2 Run specific UI test locally
+```    
+npm run tests-with "write a scenario or feature name here"
+```
+
+## 4.3 More details on how to run/debug ui tests
+Please refer to https://codecept.io/advanced
+
+## 4.4 Run Integration Tests locally
+### 4.4.1 Run API Tests
+### 4.4.2 Run Contract Tests
+
+# 5 UI Tests Design
+## 5.1 Web Tests
+
+## 5.2 Mobile Tests
+
+## 5.3 Visual Testing
+### 5.3.1 Save screenshot
 1 Please change "false" to "true" when you save screenshot as base images
 ``
 I.saveScreenshot("xxxx.png", false);
@@ -13,56 +87,8 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 
 3 MUST save screenshot in local docker cause the picture resolution taken in docker is smaller than local machine without docker
 
-
-# How to run our acceptance tests locally
-
-## The repos
-Before anything else, make sure that you have both repositories updated. If you don't have it cloned yet, use this SSH:
- - git@xxx:xxx/testApp.git
-
-Don't forget to install all the dependencies for each repo:
-``sh
-$ npm install -d
-``
-
-## Running tests
-Go to the acceptance-tests directory and follow the steps:
-1. Start the application by executing
-``sh
-$ docker-compose run --service-ports web-ci
-``
-2. Run all acceptance-tests by executing
-
-### To run/debug all tests with local docker:
-``sh
-$ docker-compose build acceptance-tests
-$ docker-compose run acceptance-tests
-``
-
-### To run all tests locally:
-``sh
-$ npm run test
-``
-
-## Useful tips
-
-[!] You can use npm run tests-with "write a scenario or feature name here" to filter tests to be executed.
-    e.g.,
-    ``sh
-    npm run tests-with "write a scenario or feature name here"
-    ``
-
-[!] An 'x' in the beginning of the scenario name will skip it.
-    e.g., xScenario('User can select multiple regions', (I) => {
-
-[!] If you need to run only one scenario, inlude a ".only" after the scenario key word.
-    e.g., Scenario.only('User can select multiple regions', (I) => {
-
-[!] Our tests are split in nodes to allows paralelize the execution. If you want to run only one node, use
-``docker-compose run -e NODE=1 acceptance-tests``
-where "1" can be replaced by the node number you want to execute.
-
 ## Mobile Testing
-
 ### Reference
 https://www.npmjs.com/package/appium-doctor
+
+# 6 Integration Tests Design

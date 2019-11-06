@@ -3,7 +3,7 @@
   "helpers": {
     "Appium": {
       "app": "",
-      "platform": "",
+      "platform": "Android",
       "desiredCapabilities": {}
     },
     "ResembleHelper": {
