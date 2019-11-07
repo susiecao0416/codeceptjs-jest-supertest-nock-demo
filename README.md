@@ -65,9 +65,14 @@ npm run tests-with "write a scenario or feature name here"
 ## 4.3 More details on how to run/debug ui tests
 Please refer to https://codecept.io/advanced
 
-## 4.4 Run Integration Tests locally
-### 4.4.1 Run API Tests
-### 4.4.2 Run Contract Tests
+## 4.4 Run all UI features locally
+```    
+npm run feature
+```
+
+## 4.5 Run Integration Tests locally
+### 4.5.1 Run API Tests
+### 4.5.2 Run Contract Tests
 
 # 5 UI Tests Framework Design
 ## 5.1 Web Tests

@@ -10,6 +10,12 @@ module.exports = {
 		discontinuedField: '#discontinued',
 		createButton: '.btn.primary'
 	},
+	
+	openComputerPage() {
+		I.amOnPage('/computers');
+		I.retry(5).waitForText('computers', 10);
+	},
+	
 	// set methods
 	addComputer(computerName, introducedDate, discontinuedDate) {
 		I.click(this.fields.addComputerButton);
@@ -18,6 +24,10 @@ module.exports = {
 		I.fillField(this.fields.introducedField, introducedDate);
 		I.fillField(this.fields.discontinuedField, discontinuedDate);
 		I.click(this.fields.createButton);
+	},
+	
+	checkMsg(expectedResult) {
+		I.see('Done! Computer ' + expectedResult + ' has been created');
 	},
 	
 	clickLink(linkType) {
