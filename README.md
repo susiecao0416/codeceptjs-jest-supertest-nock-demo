@@ -5,16 +5,16 @@ The guide is used to setup the automation framework for UI tests and integration
 ## 2.1 Tech Introduction
 - All testing framwork is based on NodeJS
 - UI
-    CodeceptJS: https://codecept.io/basics
-    Nighmare: https://github.com/segmentio/nightmare
-              https://codecept.io/nightmare
-    Appium: http://appium.io/docs/en/about-appium/getting-started/?lang=en
+    CodeceptJS: https://codecept.io/basics 
+    Nighmare: https://github.com/segmentio/nightmare 
+              https://codecept.io/nightmare  
+    Appium: http://appium.io/docs/en/about-appium/getting-started/?lang=en 
     
 - Integration
-Jest: https://jestjs.io/docs/en/getting-started
-SuperTest: https://github.com/visionmedia/supertest
-Mountebank: http://www.mbtest.org/docs/gettingStarted
-PACT: https://docs.pact.io/5-minute-getting-started-guide   
+Jest: https://jestjs.io/docs/en/getting-started 
+SuperTest: https://github.com/visionmedia/supertest 
+Mountebank: http://www.mbtest.org/docs/gettingStarted 
+PACT: https://docs.pact.io/5-minute-getting-started-guide    
 
 - All the demo is based on below testing app provided by Gatling framework
 http://computer-database.gatling.io
