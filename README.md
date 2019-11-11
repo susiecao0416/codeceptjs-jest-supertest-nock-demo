@@ -10,7 +10,7 @@ The guide is used to setup the automation framework for UI tests and integration
 - UI
     - CodeceptJS: https://codecept.io/basics
     - Nighmare: https://github.com/segmentio/nightmare
-                             https://codecept.io/nightmare
+                https://codecept.io/nightmare
     - Appium: http://appium.io/docs/en/about-appium/getting-started/?lang=en
     
 - Integration
