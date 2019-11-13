@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "jest": "jest --config apis/jest.config.js",
+    "api": "jest --config integration/apis.jest.config.js",
     "test-ci-node1": "xvfb-run codeceptjs run --steps  --grep @node1 --plugins retryFailedStep",
     "test-ci-node2": "xvfb-run codeceptjs run --steps  --grep @node2 --plugins retryFailedStep",
     "feature": "codeceptjs run --features --debug --steps --plugins allure",

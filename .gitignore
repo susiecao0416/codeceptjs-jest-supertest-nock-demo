@@ -8,3 +8,4 @@ ui-mobile/screenshots/diff
 ui/screenshots/diff
 .DS_Store
 apis/coverage/
+integration/coverage

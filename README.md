@@ -1,5 +1,4 @@
 ## 1 Goal
-
 The guide is used to setup the automation framework for UI tests and integration tests.
 
 ## 2 Tech/Code Introduction
@@ -19,8 +18,11 @@ The guide is used to setup the automation framework for UI tests and integration
     - Mountebank: http://www.mbtest.org/docs/gettingStarted
     - PACT: https://docs.pact.io/5-minute-getting-started-guide   
 
-- All the demo is based on below testing app provided by Gatling framework
+- All the UI demo is provided by testing app provided by Gatling framework
 http://computer-database.gatling.io
+
+- All the API demo is provided by 
+https://demo.api-platform.com/
 
 
 ## 3 NodeJS Installation and Setup
@@ -89,6 +91,10 @@ npm run feature
 ### 4.5 Run Integration Tests locally
 
 #### 4.5.1 Run API Tests
+```
+export TESTURL="https://demo.api-platform.com"
+npm run api
+```
 
 #### 4.5.2 Run Contract Tests
 
@@ -112,7 +118,7 @@ https://codecept.io/bdd
 
 #### 5.1.4 Reporting
 
-Please run below command to get the report:
+Please run below command to get the report locally:
 ```
 npx allure serve ui/output/allure-report
 ```

@@ -13,7 +13,7 @@ exports.config = {
 			},
 		},
 		REST: {
-			endpoint: "http://localhost/api/v1/",
+			endpoint: "http://computer-database.gatling.io/api/computer",
 			defaultHeaders: {
 				'Auth': '11111',
 				'Content-Type': 'application/json',
