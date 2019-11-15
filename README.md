@@ -22,8 +22,7 @@ The guide is used to setup the automation framework for UI tests and integration
 http://computer-database.gatling.io
 
 - All the API demo is provided by 
-https://demo.api-platform.com/
-
+https://jsonplaceholder.typicode.com/guide.html
 
 ## 3 NodeJS Installation and Setup
 
@@ -92,7 +91,7 @@ npm run feature
 
 #### 4.5.1 Run API Tests
 ```
-export TESTURL="https://demo.api-platform.com"
+export TESTURL="https://jsonplaceholder.typicode.com"
 npm run api
 ```
 
@@ -156,6 +155,10 @@ https://www.npmjs.com/package/appium-doctor
 ## 6 Integration Tests Design
 
 ### 6.1 API/Event Tests Design
+Here lists the validation points we need to do:
+- For all request, need to validate the response code and body
+- For POST/PUT request, also use "get" api to check the changes are added/updated correctly for each field
+- For DELETE request, also use "get" api to check it is really deleted
 
 ### 6.2 Mock Tests Design
 

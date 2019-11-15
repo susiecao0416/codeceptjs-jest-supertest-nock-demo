@@ -15,6 +15,6 @@ export const appConfig = {
 	},
 	
 	apiURLs: {
-		books: '/books'
+		posts: '/posts'
 	}
 };
