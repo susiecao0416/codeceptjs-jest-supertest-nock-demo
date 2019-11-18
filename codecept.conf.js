@@ -1,4 +1,6 @@
 exports.config = {
+	tests:
+		'./ui/tests/*_test.js',
 	output: './ui/output',
 	helpers: {
 		Nightmare: {
@@ -13,11 +15,9 @@ exports.config = {
 			},
 		},
 		REST: {
-			endpoint: "http://computer-database.gatling.io/api/computer",
-			defaultHeaders: {
-				'Auth': '11111',
-				'Content-Type': 'application/json',
-				'Accept': 'application/json',
+			endpoint: 'http://computer-database.gatling.io',
+			onRequest: (request) => {
+				request.headers.auth = '123';
 			}
 		},
 		ResembleHelper: {
@@ -52,8 +52,6 @@ exports.config = {
 			outputDir: './ui/output/allure-report'
 		}
 	},
-	tests:
-		'./ui/tests/*_test.js',
 	name:
 		'codeceptjs-jest-supertest-nock-demo'
 }

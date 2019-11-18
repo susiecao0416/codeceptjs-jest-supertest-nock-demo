@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "api": "jest --config integration/apis.jest.config.js",
+    "demoAPI": "codeceptjs run --tests --steps --plugins allure",
     "test-ci-node1": "xvfb-run codeceptjs run --steps  --grep @node1 --plugins retryFailedStep",
     "test-ci-node2": "xvfb-run codeceptjs run --steps  --grep @node2 --plugins retryFailedStep",
     "feature": "codeceptjs run --features --debug --steps --plugins allure",
     "test": "codeceptjs run --tests --steps --plugins allure",
     "tests-with": "codeceptjs run --steps --plugins retryFailedStep --verbose --grep",
-    "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.json --steps --verbose",
+    "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.conf.js --steps --verbose",
     "appium": "./node_modules/.bin/appium &",
     "testAppium": "codeceptjs run --config ./codecept_mobile.json --steps --plugins retryFailedStep",
     "appiumDoctor": "./node_modules/.bin/appium-doctor --android"

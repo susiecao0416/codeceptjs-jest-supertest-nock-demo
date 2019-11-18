@@ -1,0 +1,24 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1574065586349' stop='1574065587104'>
+    <name>APIs tests using CodeceptJS:</name>
+    <title>APIs tests using CodeceptJS:</title>
+    <test-cases>
+        <test-case start='1574065586351' status='passed' stop='1574065587101'>
+            <name>test API</name>
+            <title>test API</title>
+            <labels>
+                <label name='tag' value='null'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1574065586354' status='passed' stop='1574065587100'>
+                    <name>I send get request "/posts/1"</name>
+                    <title>I send get request "/posts/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -4,6 +4,9 @@ import * as configurations from '../../../config/configurations'
 import {getPostsResponse} from '../../../data/responsedata/getPosts'
 import {postsRequestBody} from '../../../data/testingdata/postsRequestbody'
 
+/*
+* Below demo is based on: https://jsonplaceholder.typicode.com
+* */
 describe('Posts Management', () => {
 		
 		var requestParameters = '';

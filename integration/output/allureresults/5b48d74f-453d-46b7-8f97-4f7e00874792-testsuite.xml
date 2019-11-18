@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1574069444148' stop='1574069444588'>
+    <name>APIs tests using CodeceptJS:</name>
+    <title>APIs tests using CodeceptJS:</title>
+    <test-cases>
+        <test-case start='1574069444150' status='failed' stop='1574069444585'>
+            <name>test API</name>
+            <title>test API</title>
+            <labels>
+                <label name='tag' value='null'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1574069444152' status='passed' stop='1574069444582'>
+                    <name>I send get request "/posts/1"</name>
+                    <title>I send get request "/posts/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>1 == 2</message>
+                <stack-trace>AssertionError [ERR_ASSERTION]: 1 == 2
+                    at Test.&lt;anonymous> (/Users/swcao/Susie/research/2automation/codeceptjs-jest-supertest-nock-demo/integration/tests/codeceptjs-demo/codeceptjs_demo_test.js:8:9)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

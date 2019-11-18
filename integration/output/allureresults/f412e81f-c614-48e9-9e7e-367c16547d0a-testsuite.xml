@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1574068971053' stop='1574068971885'>
+    <name>APIs tests using CodeceptJS:</name>
+    <title>APIs tests using CodeceptJS:</title>
+    <test-cases>
+        <test-case start='1574068971055' status='failed' stop='1574068971881'>
+            <name>test API</name>
+            <title>test API</title>
+            <labels>
+                <label name='tag' value='null'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1574068971057' status='passed' stop='1574068971879'>
+                    <name>I send get request "/posts/1"</name>
+                    <title>I send get request "/posts/1"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>undefined == '200'</message>
+                <stack-trace>AssertionError [ERR_ASSERTION]: undefined == '200'
+                    at Test.&lt;anonymous> (/Users/swcao/Susie/research/2automation/codeceptjs-jest-supertest-nock-demo/integration/tests/codeceptjs-demo/codeceptjs_demo_test.js:7:9)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

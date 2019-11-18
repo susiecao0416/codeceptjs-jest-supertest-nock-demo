@@ -90,9 +90,15 @@ npm run feature
 ### 4.5 Run Integration Tests locally
 
 #### 4.5.1 Run API Tests
+- If using supertest to run api
 ```
 export TESTURL="https://jsonplaceholder.typicode.com"
 npm run api
+```
+
+- If using codeceptjs to run api
+```
+npm run test-api
 ```
 
 #### 4.5.2 Run Contract Tests
@@ -116,10 +122,14 @@ Please refer to demo under "ui/features" folder
 https://codecept.io/bdd
 
 #### 5.1.4 Reporting
-
-Please run below command to get the report locally:
+- Please run below command to get the UI report locally:
 ```
 npx allure serve ui/output/allure-report
+```
+
+- Please run below command to get the API using codeceptjs report locally:
+```
+npx allure serve integration/output/allureresults
 ```
 #### 5.1.5 Data Driven
 
@@ -149,7 +159,6 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 ### 5.3 Mobile Testing
 
 https://www.npmjs.com/package/appium-doctor
-
 
 
 ## 6 Integration Tests Design
