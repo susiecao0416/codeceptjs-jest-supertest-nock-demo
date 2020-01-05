@@ -33,7 +33,7 @@ https://github.com/nvm-sh/nvm
 ### 3.2 Install NodeJS 12.12
 
 ```
-nvm install V12.12
+nvm install v12.12
 ```
 Then use below command to check if the installation is successful
 ```
