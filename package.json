@@ -12,7 +12,7 @@
     "tests-with": "codeceptjs run --steps --plugins retryFailedStep --verbose --grep",
     "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.conf.js --steps --verbose",
     "appium": "./node_modules/.bin/appium &",
-    "testAppium": "codeceptjs run --config ./codecept_mobile.json --steps --plugins retryFailedStep",
+    "testAndroid": "codeceptjs run --config codecept.andrioid.conf.js --steps --plugins retryFailedStep",
     "appiumDoctor": "./node_modules/.bin/appium-doctor --android"
   },
   "repository": {

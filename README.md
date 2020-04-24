@@ -155,14 +155,22 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 3 MUST save screenshot in local docker cause the picture resolution taken in docker is smaller than local machine without docker
 
 
-
 ### 5.3 Mobile Testing
-
-https://www.npmjs.com/package/appium-doctor
-
+#### 5.3.1 Android
+##### 5.3.1.1 Setup environment
+- Install JDK 1.8 and Android SDK
+- Install NodeJS
+- Install ADB
+- Install Appium if you want to know appium
+- Add one virtual device using the Android SDK
+##### 5.3.1.1 Run the mobile testing using the virtual devices configured in Android Studio
+- Run below command
+``
+npm run testAndroid
+``
+#### 5.3.2 IOS
 
 ## 6 Integration Tests Design
-
 ### 6.1 API/Event Tests Design
 Here lists the validation points we need to do:
 - For all request, need to validate the response code and body

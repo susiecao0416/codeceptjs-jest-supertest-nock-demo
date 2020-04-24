@@ -14,6 +14,7 @@ module.exports = {
 	openComputerPage() {
 		I.amOnPage('/computers');
 		I.retry(5).waitForText('computers', 10);
+		I.wait(5);
 	},
 	
 	// set methods
