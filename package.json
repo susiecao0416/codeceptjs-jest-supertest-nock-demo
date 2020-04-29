@@ -12,7 +12,8 @@
     "tests-with": "codeceptjs run --steps --plugins retryFailedStep --verbose --grep",
     "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.conf.js --steps --verbose",
     "appium": "./node_modules/.bin/appium &",
-    "testAndroid": "codeceptjs run --config codecept.andrioid.conf.js --steps --plugins retryFailedStep",
+    "testAndroid": "codeceptjs run --config codecept.andrioid.conf.js --verbose",
+    "testAppAndroid": "codeceptjs run --config codecept.app.andrioid.conf.js --verbose",
     "appiumDoctor": "./node_modules/.bin/appium-doctor --android"
   },
   "repository": {
@@ -29,11 +30,13 @@
     "appium": "^1.14.1",
     "appium-doctor": "^1.11.1",
     "babel-jest": "^24.3.1",
+    "cheerio": "^1.0.0-rc.3",
     "codeceptjs": "^2.3.4",
     "codeceptjs-resemblehelper": "^1.7.0",
     "jest": "^24.5.0",
     "nightmare": "^2.7.0",
     "supertest": "^4.0.0",
+    "uuid": "^7.0.3",
     "wd": "^1.11.3",
     "webdriverio": "^5.11.14"
   }

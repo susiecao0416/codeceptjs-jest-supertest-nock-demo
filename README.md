@@ -163,6 +163,7 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 - Install ADB
 - Install Appium if you want to know appium
 - Add one virtual device using the Android SDK
+https://developer.android.com/studio/run/emulator
 ##### 5.3.1.1 Run the mobile testing using the virtual devices configured in Android Studio
 - Run below command
 ``

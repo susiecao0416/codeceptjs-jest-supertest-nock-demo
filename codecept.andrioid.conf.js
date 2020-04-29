@@ -1,6 +1,6 @@
 exports.config = {
-	tests: './ui-mobile/tests/*_test.js',
-	output: './ui-mobile/output',
+	tests: './uiMobile/tests/*_test.js',
+	output: './uiMobile/output',
 	helpers: {
 		Appium: {
 			platform: 'Android',
@@ -9,20 +9,18 @@ exports.config = {
 				appActivity: ".Calculator",
 				deviceName: "emulator-5554",
 				platformVersion: "8.0"
-				// app: "",
-				// browserName: ""
 			}
 		},
 		ResembleHelper: {
 			require: 'codeceptjs-resemblehelper',
 			screenshotFolder: './ui/output/',
-			baseFolder: './ui-mobile/screenshots/base/',
-			diffFolder: './ui-mobile/screenshots/diff/'
+			baseFolder: './uiMobile/screenshots/base/',
+			diffFolder: './uiMobile/screenshots/diff/'
 		}
 	},
 	include: {
-		I: './ui-mobile/helpers/steps_file.js',
-		homePage: './ui-mobile/pages/computerManagement.js'
+		I: './uiMobile/helpers/steps_file.js',
+		homePage: './uiMobile/pages/computerManagement.js'
 	},
 	mocha: {},
 	bootstrap: false,
