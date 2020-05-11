@@ -156,7 +156,7 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 
 
 ### 5.3 Mobile Testing
-#### 5.3.1 Android
+#### 5.3.1 Android test
 ##### 5.3.1.1 Setup environment
 - Install JDK 1.8 and Android SDK
 - Install NodeJS
