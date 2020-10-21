@@ -131,6 +131,13 @@ npx allure serve ui/output/allure-report
 ```
 npx allure serve integration/output/allureresults
 ```
+
+- If config allure in CI/CD, please using below command:
+```
+sudo apt-add-repository ppa:yandex-qatools/allure-framework -y && sudo apt-get update && sudo apt-get install allure-commandline && allure generate ui/output/allure-report
+```
+Then the reports are generated based on the allure results, and open the index.html.
+
 #### 5.1.5 Data Driven
 
 https://codecept.io/data
