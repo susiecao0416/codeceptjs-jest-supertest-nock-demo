@@ -186,5 +186,7 @@ Here lists the validation points we need to do:
 - For DELETE request, also use "get" api to check it is really deleted
 
 ### 6.2 Mock Tests Design
+- Mountebank: http://www.mbtest.org/
+- Please run "npm run mb" command first
 
 ### 6.3 Contract Tests Design

@@ -1,0 +1,24 @@
+{
+  "predicates": [
+    {
+      "equals": {
+        "path": "/people/101",
+        "method": "GET"
+      }
+    }
+  ],
+  "responses": [
+    {
+      "is": {
+        "statusCode": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "employeeId": "10004",
+          "primaryEmail": "test@thoughtworks.com"
+        }
+      }
+    }
+  ]
+}

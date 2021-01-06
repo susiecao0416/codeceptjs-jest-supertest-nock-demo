@@ -14,7 +14,9 @@
     "appium": "./node_modules/.bin/appium &",
     "testAndroid": "codeceptjs run --config codecept.andrioid.conf.js --verbose",
     "testAppAndroid": "codeceptjs run --config codecept.app.andrioid.conf.js --verbose",
-    "appiumDoctor": "./node_modules/.bin/appium-doctor --android"
+    "appiumDoctor": "./node_modules/.bin/appium-doctor --android",
+    "api": "jest --config integration/apis.jest.config.js --detectOpenHandles",
+    "mb": "mb --configfile integration/mountebank/imposters.ejs --loglevel debug --allowInjection"
   },
   "repository": {
     "type": "git",
@@ -34,11 +36,12 @@
     "codeceptjs": "^2.3.4",
     "codeceptjs-resemblehelper": "^1.7.0",
     "jest": "^24.5.0",
+    "jest-html-reporter": "^3.2.0",
+    "mountebank": "^2.4.0",
     "nightmare": "^2.7.0",
     "supertest": "^4.0.0",
     "uuid": "^7.0.3",
     "wd": "^1.11.3",
-    "webdriverio": "^5.11.14",
-    "jest-html-reporter": "^3.2.0"
+    "webdriverio": "^5.11.14"
   }
 }

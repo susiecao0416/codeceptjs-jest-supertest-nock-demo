@@ -9,3 +9,6 @@ ui/screenshots/diff
 .DS_Store
 apis/coverage/
 integration/coverage
+mb.log
+mb.pid
+mb*.log

@@ -1,8 +1,8 @@
 export const commonData = {
 	//testing data for events
 	"invalidEmployeeId": '2019' + Math.round(Math.random() * 1000).toString(),
-	"mockEmployeeId": '10004', // Please also update the employee id in moutebank "workday.imposter.ejs"
-	"mockEmployeeIdPastHiredDate": '13407', // Please also update the employee id in moutebank "workday.imposter.ejs"
+	"mockEmployeeId": '10004', // Please also update the employee id in moutebank "testMocking.imposter.ejs"
+	"mockEmployeeIdPastHiredDate": '13407', // Please also update the employee id in moutebank "testMocking.imposter.ejs"
 	"mockIAEmployeeId": '12745',
 	"existingEmployeeId": '13333',
 	"employeeIdExiting": '13373',
