@@ -190,3 +190,51 @@ Here lists the validation points we need to do:
 - Please run "npm run mb" command first
 
 ### 6.3 Contract Tests Design
+#### PACT Demo
+This is a demo on how to use pact for contract testing
+
+#### Env
+NodeJS 12.10.0
+
+#### Testing framework
+- Jest: https://jestjs.io/docs/en/getting-started
+- Pact: https://docs.pact.io/
+
+#### Code structure
+1 consumer
+- pacts
+  automatically generated after running consumer tests
+- tests
+
+2 provider
+- src
+  the provider demo that provides two apis: get people/get leave
+- tests
+
+#### How to run
+1 Consumer
+1.1 Go to integration/pact/consumer folder, and run
+``
+npm install
+npm run test
+``
+2 Share the generated contracts in consumer/pacts folder to PactBroker server
+2.1 You can use PactFlow provided by Pact, which is cloud PactBroker server
+https://github.com/pact-foundation/pact_broker/wiki
+
+2.2 You can setup PactBroker server by youself or other ways to share
+https://github.com/pact-foundation/pact-js/#publishing-pacts-to-a-broker
+
+3 Provider
+3.1 Go to provider folder, and run
+``
+npm install
+npm run start
+npm run test
+``
+
+#### Provider
+https://github.com/pact-foundation/pact-js#provider-api-testing
+
+### WorkShop
+https://github.com/DiUS/pact-workshop-js

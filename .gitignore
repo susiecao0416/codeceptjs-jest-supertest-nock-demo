@@ -12,3 +12,4 @@ integration/coverage
 mb.log
 mb.pid
 mb*.log
+integration/pact/consumer/logs
