@@ -213,6 +213,15 @@ NodeJS 12.10.0
 
 #### How to run
 1 Consumer
+1.0 Principle
+- Create the Pact object
+- Start the Mock Provider that will stand in for your actual Provider
+- Add the interactions you expect your consumer code to make when executing the tests
+- Write your tests - the important thing here is that you test the outbound collaborating function which calls the Provider, and not just issue raw http requests to the Provider. This ensures you are testing your actual running code, just like you would in any other unit test, and that the tests will always remain up to date with what your consumer is doing.
+- Validate the expected interactions were made between your consumer and the Mock Service
+- Generate the pact(s)
+- Publish the pact(s)
+
 1.1 Go to integration/pact/consumer folder, and run
 ``
 npm install
@@ -220,10 +229,13 @@ npm run test
 ``
 2 Share the generated contracts in consumer/pacts folder to PactBroker server
 2.1 You can use PactFlow provided by Pact, which is cloud PactBroker server
-https://github.com/pact-foundation/pact_broker/wiki
+- You can setup server here: https://freebroker.pact.dius.com.au/
+- You can follow below guides to publish your generated contracts to this server:
+https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts
 
 2.2 You can setup PactBroker server by youself or other ways to share
 https://github.com/pact-foundation/pact-js/#publishing-pacts-to-a-broker
+https://www.softwaretestinghelp.com/publish-pact-contract-to-pact-broker/
 
 3 Provider
 3.1 Go to provider folder, and run
@@ -238,3 +250,8 @@ https://github.com/pact-foundation/pact-js#provider-api-testing
 
 ### WorkShop
 https://github.com/DiUS/pact-workshop-js
+
+### Issues
+- TypeError: Cannot read property 'writePact' of undefined
+1.1 Set Jest timeout
+1.2 The mock server provider port might be used, change to another port

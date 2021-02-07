@@ -42,7 +42,6 @@
     "supertest": "^4.0.0",
     "uuid": "^7.0.3",
     "wd": "^1.11.3",
-    "webdriverio": "^5.11.14",
-    "@pact-foundation/pact": "^9.1.1"
+    "webdriverio": "^5.11.14"
   }
 }

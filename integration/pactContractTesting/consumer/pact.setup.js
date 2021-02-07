@@ -1,6 +1,7 @@
 import {Pact} from '@pact-foundation/pact'
 
-global.port = 9000;
+//create a mock server
+global.port = 7000;
 global.provider = new Pact({
 	port: global.port,
 	log: './logs/pact.log',

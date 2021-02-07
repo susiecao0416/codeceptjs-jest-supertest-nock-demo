@@ -1,6 +1,6 @@
 module.exports = {
 	verbose: true,
-	testRegex: "tests/demo.consumer2.contract.test.js",
+	testRegex: "tests/demo2.consumer.contract.test.js",
 	setupFiles:
 		[
 			"<rootDir>/pact2.setup.js",
