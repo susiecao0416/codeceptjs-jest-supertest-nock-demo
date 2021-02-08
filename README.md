@@ -231,7 +231,13 @@ npm run test
 2.1 You can use PactFlow provided by Pact, which is cloud PactBroker server
 - You can setup server here: https://freebroker.pact.dius.com.au/
 - You can follow below guides to publish your generated contracts to this server:
+You can use postman or publish OR
 https://github.com/pact-foundation/pact_broker/wiki/Publishing-and-retrieving-pacts
+You can go to the root folder and type below command to publish using code:
+`
+export PACT_BROKER_TOKEN='xxx'  //You can get this from https://freebroker.pact.dius.com.au -> Settings -> API Tokens
+node integration/pactContractTesting/provider/publish.js
+`
 
 2.2 You can setup PactBroker server by youself or other ways to share
 https://github.com/pact-foundation/pact-js/#publishing-pacts-to-a-broker

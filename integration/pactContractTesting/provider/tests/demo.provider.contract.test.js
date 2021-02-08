@@ -6,7 +6,7 @@ describe('Provider1 test - pact verification on all consumers', () => {
 		pactBrokerUrl: 'https://freebroker.pact.dius.com.au/',
 		provider: 'provider1',
 		providerBaseUrl: 'http://localhost:2000',
-		pactBrokerToken: 'YRGtseFd2f1Um6uyMB_MFQ',
+		pactBrokerToken: process.env.PACT_BROKER_TOKEN,
 		publishVerificationResult: true,
 		providerVersion: '1.0.0',
 	};
