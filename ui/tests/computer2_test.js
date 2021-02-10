@@ -1,8 +1,8 @@
-Feature('Demo1 feature to test');
+Feature('Demo2 feature to test');
 
-Scenario('Add Computer1', (I, homePage) => {
+Scenario('Add Computer2', (I, homePage) => {
 	homePage.openComputerPage();
-	homePage.addComputer('testComputer202002', '2019-01-01', '2022-01-01');
+	homePage.addComputer('testComputer202001', '2019-01-01', '2023-01-01');
 	
 	I.wait(2);
 	// I.saveScreenshot("AddComputer.png");

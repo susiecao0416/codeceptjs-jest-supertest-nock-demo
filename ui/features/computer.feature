@@ -15,6 +15,6 @@ Feature: Computer Management
 
     Examples:
       | computerName      | introducedDate | discontinuedDate |
-      | testComputer20191 | 2019-01-01     | 2020-01-01       |
-      | testComputer20192 | 2019-01-05     | 2020-01-05       |
+      | testComputerFeature1 | 2019-01-01     | 2020-01-01       |
+      | testComputerFeature2 | 2019-01-05     | 2020-01-05       |
 

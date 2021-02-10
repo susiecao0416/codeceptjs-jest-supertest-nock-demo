@@ -1,5 +1,5 @@
 exports.config = {
-	tests: './ui/tests/*_test.js',
+	tests: '/ui/tests/*_test.js',
 	output: './ui/output',
 	helpers: {
 		Nightmare: {
@@ -18,13 +18,13 @@ exports.config = {
 			onRequest: (request) => {
 				request.headers.auth = '123';
 			}
-		},
-		ResembleHelper: {
-			require: 'codeceptjs-resemblehelper',
-			screenshotFolder: './ui/output/',
-			baseFolder: './ui/screenshots/base/',
-			diffFolder: './ui/screenshots/diff/'
 		}
+		// ResembleHelper: {
+		// 	require: 'codeceptjs-resemblehelper',
+		// 	screenshotFolder: './ui/output/',
+		// 	baseFolder: './ui/screenshots/base/',
+		// 	diffFolder: './ui/screenshots/diff/'
+		// }
 	},
 	include: {
 		I: './ui/helpers/steps_file.js',

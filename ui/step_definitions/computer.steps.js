@@ -8,7 +8,7 @@ Given('I am on Computer Management page', () => {
 
 Given('I Add computer with valid information', () => {
 	// From "ui/features/computer.feature" {"line":7,"column":5}
-	homePage.addComputer('test1', '2019-02-02', '2019-02-02');
+	homePage.addComputer('testComputerFeature3', '2019-02-02', '2020-02-02');
 });
 
 When('I Add computer with valid {string} and {string} and {string}', (computerName, introducedDate, discontinuedDate) => {

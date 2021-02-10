@@ -81,7 +81,7 @@ npm run tests-with "write a scenario or feature name here"
 
 Please refer to https://codecept.io/advanced
 
-### 4.4 Run all UI features locally
+### 4.4 Run all UI features locally in bdd way
 
 ```    
 npm run feature
