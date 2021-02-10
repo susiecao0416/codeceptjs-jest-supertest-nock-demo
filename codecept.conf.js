@@ -1,5 +1,5 @@
 exports.config = {
-	tests: '/ui/tests/*_test.js',
+	tests: './ui/tests/*_test.js',
 	output: './ui/output',
 	helpers: {
 		Nightmare: {
