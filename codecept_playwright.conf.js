@@ -23,6 +23,12 @@ exports.config = {
 			// webPreferences: {
 			// 	partition: 'nopersist'
 			// }
+		},
+		ResembleHelper: {
+			require: 'codeceptjs-resemblehelper',
+			screenshotFolder: './ui/output/',
+			baseFolder: './ui/screenshots/base/',
+			diffFolder: './ui/screenshots/diff/'
 		}
 	},
 	include: {
@@ -47,6 +53,20 @@ exports.config = {
 			outputDir: './ui/output/allure-report',
 			enableScreenshotDiffPlugin: true
 		}
+	},
+	multiple: {
+		parallel: {
+			chunks: 2,
+			browsers: [
+				{
+					browser: 'chrome',
+					windowSize: '1200x800',
+				},
+				{
+					browser: 'firefox',
+					windowSize: '1200x800',
+				}],
+		},
 	},
 	name: 'acceptance-tests'
 }

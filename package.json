@@ -5,19 +5,18 @@
   "main": "index.js",
   "scripts": {
     "feature": "codeceptjs run --features --debug --steps --plugins allure",
-    "test": "codeceptjs run --steps --plugins allure",
-    "tests-with": "codeceptjs run --steps --plugins retryFailedStep --verbose --grep",
-    "parallel-test": "codeceptjs run-workers 2 --plugins allure",
-    "parallel-suite-test": "codeceptjs run-workers --suites 2 --plugins allure",
+    "test": "codeceptjs run --tests --steps --plugins allure",
+    "tests-with": "codeceptjs run --tests --steps --plugins retryFailedStep --verbose --grep",
+    "parallel-test": "codeceptjs run-workers 2 --tests --plugins allure",
+    "parallel-suite-test": "codeceptjs run-workers --suites 2 --tests --plugins allure",
+    "multiple-test": "codeceptjs run --config codecept_playwright.conf.js --tests --steps --verbose",
+    "multiple-test1": "./node_modules/.bin/codeceptjs run --tests --config ./codecept_puppeteer.conf.js --verbose",
     "test-ci-node1": "xvfb-run npx codeceptjs run --steps --grep @node1 --plugins retryFailedStep --plugins allure",
     "test-ci-node2": "xvfb-run npx codeceptjs run --steps --grep @node2 --plugins retryFailedStep --plugins allure",
-    "test-api": "./node_modules/.bin/codeceptjs run --config ./resthelper.conf.js --steps --verbose",
     "appium": "./node_modules/.bin/appium &",
     "testAndroid": "codeceptjs run --config codecept.andrioid.conf.js --verbose",
     "testAppAndroid": "codeceptjs run --config codecept.app.andrioid.conf.js --verbose",
-    "appiumDoctor": "./node_modules/.bin/appium-doctor --android",
-    "api": "jest --config integration/apis.jest.config.js --detectOpenHandles",
-    "mb": "mb --configfile integration/mountebank/imposters.ejs --loglevel debug --allowInjection"
+    "appiumDoctor": "./node_modules/.bin/appium-doctor --android"
   },
   "repository": {
     "type": "git",
@@ -29,20 +28,17 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
+    "@babel/node": "^7.6.3",
     "allure-commandline": "^2.13.0",
     "appium": "^1.14.1",
     "appium-doctor": "^1.11.1",
-    "babel-jest": "^24.3.1",
-    "cheerio": "^1.0.0-rc.3",
     "codeceptjs": "^2.3.4",
     "codeceptjs-resemblehelper": "^1.7.0",
-    "jest": "^24.5.0",
-    "jest-html-reporter": "^3.2.0",
-    "mountebank": "^2.4.0",
     "nightmare": "^2.7.0",
-    "supertest": "^4.0.0",
-    "uuid": "^7.0.3",
-    "wd": "^1.11.3",
-    "webdriverio": "^5.11.14"
+    "puppeteer": "2.1.0"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "playwright": "^1.8.1"
   }
 }

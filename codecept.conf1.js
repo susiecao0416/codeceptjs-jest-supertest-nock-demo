@@ -2,21 +2,21 @@ exports.config = {
 	tests: './ui/tests/*_test.js',
 	output: './ui/output',
 	helpers: {
-		Puppeteer: {
-			url: 'http://apphost:3000',
-			show: true, //for debugging locally in non-docker env
-			restart: false,
+		Nightmare: {
+			url: 'http://computer-database.gatling.io',
+			show: true,
 			waitForTimeout: 20000,
-			waitForAction: 3000,
-			waitForNavigation: ['domcontentloaded', 'networkidle0'],
-			getPageTimeout: 30000,
+			waitForAction: 2000,
 			fullPageScreenshots: true,
-			chrome: {
-				args: ['--no-sandbox', '--disable-setuid-sandbox']
-			},
 			windowSize: '1200x800',
 			webPreferences: {
 				partition: 'nopersist'
+			},
+		},
+		REST: {
+			endpoint: 'http://computer-database.gatling.io',
+			onRequest: (request) => {
+				request.headers.auth = '123';
 			}
 		},
 		ResembleHelper: {
@@ -34,7 +34,10 @@ exports.config = {
 	bootstrap: false,
 	teardown: null,
 	hooks: [],
-	gherkin: {},
+	gherkin: {
+		features: './ui/features/*.feature',
+		steps: ['./ui/step_definitions/computer.steps.js']
+	},
 	plugins: {
 		screenshotOnFail: {
 			enabled: true
@@ -45,9 +48,9 @@ exports.config = {
 		},
 		allure: {
 			enabled: true,
-			outputDir: './ui/output/allure-report',
-			enableScreenshotDiffPlugin: true
+			outputDir: './ui/output/allure-report'
 		}
 	},
-	name: 'acceptance-tests'
+	name:
+		'codeceptjs-jest-supertest-nock-demo'
 }

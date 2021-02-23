@@ -1,6 +1,6 @@
 module.exports = {
 	verbose: true,
-	testRegex: "integration/tests/apis/.*\\.(js)$",
+	testRegex: "tests/apis/jest-coverage-demo/demo.unit.coverage.test.js",
 	setupFiles:
 		[
 			"<rootDir>/config/env.js"
@@ -8,11 +8,15 @@ module.exports = {
 	setupFilesAfterEnv: [
 		"<rootDir>/config/jest.setup.js"
 	],
+	runner: "groups",
+	collectCoverageFrom: [
+		"<rootDir>/src/unitsrc.js"
+	],
 	reporters: [
 		"default",
-		["../node_modules/jest-html-reporter", {
+		["<rootDir>/node_modules/jest-html-reporter", {
 			"pageTitle": "API Tests Report",
-			"outputPath": "./integration/output/api-test-report.html",
+			"outputPath": "<rootDir>/output/api-test-report.html",
 			"includeFailureMsg": true,
 			"includeSuiteFailure": true,
 			"includeConsoleLog": true

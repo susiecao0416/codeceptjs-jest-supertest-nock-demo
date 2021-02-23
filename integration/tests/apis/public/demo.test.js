@@ -8,6 +8,10 @@ import fs from "fs";
 /*
 * Below demo is based on: https://jsonplaceholder.typicode.com
 * */
+
+/***
+ * @group local
+ */
 describe('Demo Tests', () => {
 		
 		//the picture is encoded with 64 format
@@ -35,7 +39,6 @@ describe('Demo Tests', () => {
 			const testingURL = '/consultant_resumes';
 			var fileName = 'xxx.pdf';
 			var filePath = __dirname + '/../../../data/testingdata/' + fileName;
-	;
 			var expectedResponse = {
 				"resumeName": fileName
 			};

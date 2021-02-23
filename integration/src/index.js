@@ -1,5 +1,5 @@
 import express from 'express';
-import {getConsultantResults, getLeaveResults} from './postgresqlConn';
+//import {getConsultantResults, getLeaveResults} from './postgresqlConn';
 
 const app = express();
 app.set('port', process.env.PORT || 2000);
@@ -35,6 +35,6 @@ app.get('/api/providerdemo', (req, res) => {
 	}
 );
 
-app.listen(2000, () => {
-	console.log('Server is running.. on Port 2000 ');
+app.listen(process.env.PORT, () => {
+	console.log('Server is running.. on Port ' + process.env.PORT);
 });

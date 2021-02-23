@@ -13,3 +13,4 @@ mb.log
 mb.pid
 mb*.log
 integration/pactContractTesting/consumer
+integration/output

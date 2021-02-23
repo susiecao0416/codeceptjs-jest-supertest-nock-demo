@@ -9,7 +9,7 @@ export const appConfig = {
 	},
 	
 	appwEnvURLs: {
-		local: 'http://localhost:3000',
+		local: 'http://localhost:2000',
 		staging: 'https://staging.app.com',
 		production: ""
 	},

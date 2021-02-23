@@ -4,23 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js",
+    "start": "nodemon --exec babel-node ../../src/index.js",
     "test": "jest --config demo.provider.jest.config.js --detectOpenHandles"
   },
   "repository": {
     "type": "git",
     "url": "git@git.thoughtworks.net:techops-delivery-staffing-team/acceptance-tests.git"
   },
-  "author": "",
+  "author": "susie",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.6.3",
-    "jest": "^24.5.0",
+    "@pact-foundation/pact": "^9.1.1",
     "express": "^4.17.1",
+    "jest": "^24.5.0",
     "nodemon": "^1.19.4",
-    "pg": "^7.12.1",
-    "@pact-foundation/pact": "^9.1.1"
+    "pg": "^7.12.1"
   }
 }

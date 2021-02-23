@@ -5,7 +5,7 @@ Scenario('Add Computer1', (I, homePage) => {
 	homePage.addComputer('testComputer202002', '2019-01-01', '2022-01-01');
 	
 	I.wait(2);
-	// I.saveScreenshot("AddComputer.png");
-	// I.seeVisualDiff("AddComputer.png", {tolerance: 0, prepareBaseImage: true});
+	I.saveScreenshot("AddComputer.png");
+	I.seeVisualDiff("AddComputer.png", {tolerance: 0, prepareBaseImage: true});
 });
 

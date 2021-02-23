@@ -143,7 +143,6 @@ Then the reports are generated based on the allure results, and open the index.h
 https://codecept.io/data
 
 
-
 ### 5.2 Visual Testing Design
 
 #### 5.2.1 Save screenshot
@@ -161,6 +160,8 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 
 3 MUST save screenshot in local docker cause the picture resolution taken in docker is smaller than local machine without docker
 
+#### 5.2.3 Limitations
+Currently cannot use CodeceptJS Run Worker when using resemblehelper plugin
 
 ### 5.3 Mobile Testing
 #### 5.3.1 Android test
