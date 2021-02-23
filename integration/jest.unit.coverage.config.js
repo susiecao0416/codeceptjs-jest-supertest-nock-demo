@@ -10,7 +10,7 @@ module.exports = {
 	],
 	runner: "groups",
 	collectCoverageFrom: [
-		"<rootDir>/src/unitsrc.js"
+		"<rootDir>/src/*.js"
 	],
 	reporters: [
 		"default",

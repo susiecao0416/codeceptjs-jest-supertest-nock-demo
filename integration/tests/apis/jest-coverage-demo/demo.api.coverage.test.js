@@ -17,7 +17,7 @@ describe('Demo - Jest API Coverage', () => {
 			});
 	});
 	
-	test.skip('Check API returning null reponse with collected coverage', (done) => {
+	test('Check API returning null reponse with collected coverage', (done) => {
 		const expectedResponse = {
 			"error": "validDate is required"
 		};
