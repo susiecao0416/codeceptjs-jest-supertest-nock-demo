@@ -180,6 +180,8 @@ npm run testAndroid
 #### 5.3.2 IOS
 
 ## 6 Integration Tests Design
+### 6.0 Coverage configurations
+https://github.com/facebook/jest/blob/master/docs/Configuration.md
 ### 6.1 API/Event Tests Design
 Here lists the validation points we need to do:
 - For all request, need to validate the response code and body

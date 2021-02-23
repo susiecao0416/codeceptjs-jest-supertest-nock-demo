@@ -1,6 +1,3 @@
-import * as apiRequest from '../../../src/index'
-
-//Not sure why the coverage report is not accuarate cause the branch line still 50%
 describe('Demo - Jest API Coverage', () => {
 	
 	//Failed to collect api coverage report using Jest
@@ -11,8 +8,7 @@ describe('Demo - Jest API Coverage', () => {
 			count: 1000
 		};
 		
-		httpRequest
-			.get('/api/providerdemo?validDate=2011-03-01')
+		httpRequest.get('/api/providerdemo?validDate=2011-03-01')
 			.set('Accept', 'application/json')
 			.expect(200)
 			.then(response => {
@@ -21,13 +17,12 @@ describe('Demo - Jest API Coverage', () => {
 			});
 	});
 	
-	test('Check API returning null reponse with collected coverage', (done) => {
+	test.skip('Check API returning null reponse with collected coverage', (done) => {
 		const expectedResponse = {
 			"error": "validDate is required"
 		};
 		
-		httpRequest
-			.get('/api/providerdemo?validDate=')
+		httpRequest.get('/api/providerdemo?validDate=')
 			.set('Accept', 'application/json')
 			.expect(400)
 			.then(response => {

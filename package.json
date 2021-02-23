@@ -26,16 +26,17 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/node": "^7.6.3",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/node": "^7.6.3",
     "allure-commandline": "^2.13.0",
     "appium": "^1.14.1",
     "appium-doctor": "^1.11.1",
     "codeceptjs": "^2.3.4",
     "codeceptjs-resemblehelper": "^1.7.0",
     "nightmare": "^2.7.0",
-    "puppeteer": "2.1.0"
+    "puppeteer": "2.1.0",
+    "puppeteer-to-istanbul": "^1.4.0"
   },
   "dependencies": {
     "install": "^0.13.0",

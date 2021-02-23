@@ -10,13 +10,6 @@ app.set('port', process.env.PORT || 2000);
 // 		return res.send(expectedResult[0]);
 // 	})
 // });
-//
-// app.get('/api/leave', (req, res) => {
-// 	getLeaveResults().then((result) => {
-// 		const expectedResult = result.rows;
-// 		return res.send(expectedResult[0]);
-// 	})
-// });
 
 app.get('/api/providerdemo', (req, res) => {
 		
@@ -35,6 +28,5 @@ app.get('/api/providerdemo', (req, res) => {
 	}
 );
 
-app.listen(process.env.PORT, () => {
-	console.log('Server is running.. on Port ' + process.env.PORT);
-});
+app.listen(process.env.PORT);
+module.exports = app;

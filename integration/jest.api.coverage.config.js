@@ -9,6 +9,18 @@ module.exports = {
 		"<rootDir>/config/jest.setup.js"
 	],
 	runner: "groups",
+	coverageThreshold: {
+		"global": {
+			"branches": 80,
+			"functions": 80,
+			"lines": 80,
+			"statements": -10
+		},
+		"./src/*.js/": {
+			"branches": 40,
+			"statements": 40
+		},
+	},
 	collectCoverageFrom: [
 		"<rootDir>/src/index.js"
 	],

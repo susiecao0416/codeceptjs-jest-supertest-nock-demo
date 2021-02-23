@@ -1,12 +1,14 @@
 "use strict";
 
 import * as configurations from './configurations'
-import request from "supertest";
+import supertest from "supertest";
+import server from '../src/index';
 
 const testAppURL = configurations.appConfig.systemEnv.testURL;
-global.httpRequest = request(testAppURL);
+global.httpRequest = supertest(server);
 global.testData = '';
 global.isLocal = true;
+//global.httpRequest = request(testAppURL); without using coverage
 
 // Get testing data for current env
 if (testAppURL == configurations.appConfig.appwEnvURLs.local) {
