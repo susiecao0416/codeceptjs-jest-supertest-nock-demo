@@ -4,25 +4,23 @@ exports.config = {
 	helpers: {
 		Playwright: {
 			url: 'http://computer-database.gatling.io',
-			show: false, //for debugging locally in non-docker env
-			browser: 'chromium',
-			restart: false,
+			show: true, //for debugging locally in non-docker env
+			browser: 'chrome', //could not support firefox cause version compatibility
 			waitForTimeout: 20000,
 			waitForAction: 3000,
-			waitForNavigation: ['load', 'domcontentloaded', 'networkidle0', 'networkidle2']
-			// waitForSelector: ['visible'],
-			// getPageTimeout: 300000,
-			// fullPageScreenshots: true,
-			// chrome: {
-			// 	args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors']
-			// },
-			// firefox: {
-			// 	args: ['--wait-for-browser', '--no-sandbox', '--disable-setuid-sandbox','--ignore-certificate-errors']
-			// },
-			// windowSize: '1200x800',
-			// webPreferences: {
-			// 	partition: 'nopersist'
-			// }
+			getPageTimeout: 300000,
+			fullPageScreenshots: true,
+			waitForNavigation: "domcontentloaded",
+			chromium: {
+				args: ['--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors']
+			},
+			firefox: {
+				args: ['--wait-for-browser', '--no-sandbox', '--disable-setuid-sandbox', '--ignore-certificate-errors']
+			},
+			windowSize: '1200x800',
+			webPreferences: {
+				partition: 'nopersist'
+			}
 		},
 		ResembleHelper: {
 			require: 'codeceptjs-resemblehelper',

@@ -52,7 +52,7 @@ exports.config = {
 		},
 		puppeteerCoverage: {
 			enabled: true,
-			coverageDir: 'ui/uiCoverage/puppeteerCoverage'
+			coverageDir: './ui/uiCoverage/puppeteerCoverage'
 		},
 	},
 	multiple: {

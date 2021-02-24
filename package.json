@@ -11,8 +11,7 @@
     "parallel-suite-test": "codeceptjs run-workers --suites 2 --tests --plugins allure",
     "puppeteer-test": "codeceptjs run --config codecept_puppeteer.conf.js --tests --plugins retryFailedStep --plugins allure --plugins puppeteerCoverage",
     "get-coverage-report": "node ui/helpers/convertistanbul.js && nyc report --reporter=html --temp-dir='ui/uiCoverage/.nyc_output' --report-dir='ui/uiCoverage/finalCoverageReport'",
-    "multiple-test": "codeceptjs run --config codecept_playwright.conf.js --tests --steps --verbose",
-    "multiple-test1": "./node_modules/.bin/codeceptjs run --tests --config ./codecept_puppeteer.conf.js --verbose",
+    "playwright-test": "codeceptjs run --config codecept_playwright.conf.js --tests --steps --verbose",
     "test-ci-node1": "xvfb-run npx codeceptjs run --steps --grep @node1 --plugins retryFailedStep --plugins allure",
     "test-ci-node2": "xvfb-run npx codeceptjs run --steps --grep @node2 --plugins retryFailedStep --plugins allure",
     "appium": "./node_modules/.bin/appium &",
@@ -34,15 +33,16 @@
     "allure-commandline": "^2.13.0",
     "appium": "^1.14.1",
     "appium-doctor": "^1.11.1",
-    "codeceptjs": "^2.3.4",
-    "codeceptjs-resemblehelper": "^1.7.0",
+    "codeceptjs": "2.6.4",
+    "codeceptjs-resemblehelper": "^1.9.3",
     "nightmare": "^2.7.0",
     "nyc": "^15.1.0",
     "puppeteer": "2.1.0",
-    "puppeteer-to-istanbul": "^1.4.0"
+    "puppeteer-to-istanbul": "^1.4.0",
+    "testcafe": "^1.11.0"
   },
   "dependencies": {
     "install": "^0.13.0",
-    "playwright": "^1.8.1"
+    "playwright": "1.0.0"
   }
 }
