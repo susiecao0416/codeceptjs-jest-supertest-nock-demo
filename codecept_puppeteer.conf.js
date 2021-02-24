@@ -49,7 +49,11 @@ exports.config = {
 			enabled: true,
 			outputDir: './ui/output/allure-report',
 			enableScreenshotDiffPlugin: true
-		}
+		},
+		puppeteerCoverage: {
+			enabled: true,
+			coverageDir: 'ui/uiCoverage/puppeteerCoverage'
+		},
 	},
 	multiple: {
 		parallel: {

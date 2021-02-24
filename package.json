@@ -9,6 +9,8 @@
     "tests-with": "codeceptjs run --tests --steps --plugins retryFailedStep --verbose --grep",
     "parallel-test": "codeceptjs run-workers 2 --tests --plugins allure",
     "parallel-suite-test": "codeceptjs run-workers --suites 2 --tests --plugins allure",
+    "puppeteer-test": "codeceptjs run --config codecept_puppeteer.conf.js --tests --plugins retryFailedStep --plugins allure --plugins puppeteerCoverage",
+    "get-coverage-report": "node ui/helpers/convertistanbul.js && nyc report --reporter=html --temp-dir='ui/uiCoverage/.nyc_output' --report-dir='ui/uiCoverage/finalCoverageReport'",
     "multiple-test": "codeceptjs run --config codecept_playwright.conf.js --tests --steps --verbose",
     "multiple-test1": "./node_modules/.bin/codeceptjs run --tests --config ./codecept_puppeteer.conf.js --verbose",
     "test-ci-node1": "xvfb-run npx codeceptjs run --steps --grep @node1 --plugins retryFailedStep --plugins allure",
@@ -35,6 +37,7 @@
     "codeceptjs": "^2.3.4",
     "codeceptjs-resemblehelper": "^1.7.0",
     "nightmare": "^2.7.0",
+    "nyc": "^15.1.0",
     "puppeteer": "2.1.0",
     "puppeteer-to-istanbul": "^1.4.0"
   },
