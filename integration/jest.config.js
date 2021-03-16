@@ -14,7 +14,7 @@ module.exports = {
 	],
 	reporters: [
 		"default",
-		["../node_modules/jest-html-reporter", {
+		["<rootDir>/node_modules/jest-html-reporter", {
 			"pageTitle": "API Tests Report",
 			"outputPath": "./integration/output/api-test-report.html",
 			"includeFailureMsg": true,

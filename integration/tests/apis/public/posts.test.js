@@ -35,6 +35,7 @@ describe('Posts Management', () => {
 			requestBody = postsRequestBody({
 				title: Math.random().toString(10),
 			});
+			});
 			
 			httpRequest
 				.post(configurations.appConfig.apiURLs.posts)

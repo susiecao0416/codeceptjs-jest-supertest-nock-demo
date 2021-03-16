@@ -265,3 +265,6 @@ https://github.com/DiUS/pact-workshop-js
 - TypeError: Cannot read property 'writePact' of undefined
 1.1 Set Jest timeout
 1.2 The mock server provider port might be used, change to another port
+
+### Faker
+https://zetcode.com/javascript/fakerjs/
