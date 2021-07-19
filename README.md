@@ -161,7 +161,16 @@ if the page data size is more than 2 it causes much time to save screenshot in d
 3 MUST save screenshot in local docker cause the picture resolution taken in docker is smaller than local machine without docker
 
 #### 5.2.3 Limitations
-Currently cannot use CodeceptJS Run Worker when using resemblehelper plugin
+1 Currently cannot use CodeceptJS Run Worker when using resemblehelper plugin
+2 If you continue to receive below warning:
+ ``
+ Do you want the application "chromium app" to accept incoming network connections
+ ``
+ Please execute the below command:
+ ``
+ sudo codesign --force --deep --sign - ./node_modules/puppeteer/.local-chromium/mac-722234/chrome-mac/Chromium.app
+
+ ``
 
 ### 5.3 Mobile Testing
 #### 5.3.1 Android test
