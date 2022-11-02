@@ -31,7 +31,7 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "allure-commandline": "^2.13.0",
-    "appium": "^1.14.1",
+    "appium": "^1.22.3",
     "appium-doctor": "^1.11.1",
     "codeceptjs": "2.6.4",
     "codeceptjs-resemblehelper": "^1.9.3",
