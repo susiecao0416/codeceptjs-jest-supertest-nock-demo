@@ -39,7 +39,7 @@
     "nyc": "^15.1.0",
     "puppeteer": "2.1.0",
     "puppeteer-to-istanbul": "^1.4.0",
-    "testcafe": "^1.11.0"
+    "testcafe": "^15.1.317922"
   },
   "dependencies": {
     "install": "^0.13.0",
